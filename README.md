@@ -35,11 +35,12 @@ pip install -U --index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/
 # Install from source
 
 ```
+sudo apt-get install build-essential cmake
 git clone https://github.com/openai/triton.git;
 cd triton;
 
 pip install ninja cmake wheel bs4; # build-time dependencies
-pip install -e python
+pip install -e python --no-build-isolation
 ```
 
 Or with a virtualenv:
